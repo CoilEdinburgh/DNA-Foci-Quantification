@@ -18,7 +18,7 @@ To install Cellpose to use with ImageJ on a windows computer;
 - Open the script in ImageJ File-> New…-> Script
 - At the bottom of the script delete the annotated code (this is used to run the script in the development environment)
 - Select Run
-- You will be asked to select a folder, it is expected that the folder will contain .czi image stacks with 3 channels, channel 2 = MeCP2 and channel 3 = DAPI. 
+- You will be asked to select a folder, it is expected that the folder will contain .czi image stacks with 3 channels, where channel 2 = MeCP2 and channel 3 = DAPI. 
 - The plugin creates maximum and mean z-projections of the image stacks. Cellpose is run on the mean z-project of the DAPI channel using the ‘cyto’ model with an estimated diameter of 200 pixels. 
 - Nuclear ROIs are determined from the Cellpose masks. A Huang threshold is applied in the MeCP2 maximum projection to determine which cells are expressing MeCP2, in these cells a Yen threshold is then applied to the DAPI maximum projection to detect DNA-dense Foci. 
-- The size and number of foci per nucleus and the intensities in both channels for both the foci and the nucleoplasm are output to a results file. A further results file showing per nucleus averages and output images for the two maximum projections with an overlay of the analysed regions are also saved.
+- The size and number of foci per nucleus and the intensities in both channels for both the foci and the nucleoplasm are output to a results file in an Output folder alongside the orginal data. A further results file showing per nucleus averages and output images for the two maximum projections with an overlay of the analysed regions are also saved.
