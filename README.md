@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/614792164.svg)](https://zenodo.org/badge/latestdoi/614792164)
+
 # DNA-Foci-Quantification
 Groovy script which uses detects nuclei and DNA foci and quantifies size and intensity in two channels 
 
