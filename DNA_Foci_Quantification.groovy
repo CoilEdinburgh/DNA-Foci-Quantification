@@ -407,17 +407,17 @@ class DNA_Foci_Quantification implements Command {
         return (Img) projected
     }
 
-//delete when running in script editor
-    static {
-        LegacyInjector.preinit()
-    }
-//delete when running in script editor
+
+    static {                    //delete when running in script editor
+        LegacyInjector.preinit()//delete when running in script editor
+    }                           //delete when running in script editor
+
 
     static void main(String[] args) {
         def context = (Context) IJ.runPlugIn("org.scijava.Context", "")
         def commandService = context.getService(CommandService.class)
         def uIService = context.getService(UIService.class)//delete when running in script editor
-        uIService.showUI() // <== THAT DOES THE TRICK! //delete when running in script editor
+        uIService.showUI() //delete when running in script editor
         commandService.run(DNA_Foci_Quantification.class, true)
 
     }
