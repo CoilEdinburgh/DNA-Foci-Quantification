@@ -17,6 +17,19 @@ To install Cellpose to use with ImageJ on a windows computer;
 ## Running the script
 - Open the script in ImageJ File-> New…-> Script
 - At the bottom of the script delete the annotated code (this is used to run the script in the development environment)
+```groovy
+    static {                    //delete when running in script editor
+        LegacyInjector.preinit()//delete when running in script editor
+    }                           //delete when running in script editor
+
+
+    static void main(String[] args) {
+        def context = (Context) IJ.runPlugIn("org.scijava.Context", "")
+        def commandService = context.getService(CommandService.class)
+        def uIService = context.getService(UIService.class)//delete when running in script editor
+        uIService.showUI() //delete when running in script editor
+        commandService.run(DNA_Foci_Quantification.class, true)
+ ```
 - Select Run
 - You will be asked to select a folder, it is expected that the folder will contain .czi image stacks with 3 channels, where channel 2 = MeCP2 and channel 3 = DAPI. 
 - The plugin creates maximum and mean z-projections of the image stacks. Cellpose is run on the mean z-project of the DAPI channel using the ‘cyto’ model with an estimated diameter of 200 pixels. 
