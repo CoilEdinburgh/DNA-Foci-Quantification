@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/614792164.svg)](https://zenodo.org/badge/latestdoi/614792164)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8379949.svg)](https://doi.org/10.5281/zenodo.8379949)
 
 # DNA-Foci-Quantification
 Groovy script which uses detects nuclei and DNA foci and quantifies size and intensity in two channels. A second script which additionally outputs the total GFP intensity (sum over pixels) per cell is also included in the repository.
